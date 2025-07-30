@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Okush Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #e0f2f1;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #0047ab;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      background-color: #0077b6;
+      margin: 0;
+      padding: 0.8rem 0;
+    }
+    nav ul li {
+      margin: 0 1.5rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      margin-top: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 0.7s ease;
+    }
+    h2 {
+      color: #0047ab;
+      margin-bottom: 1rem;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #00bcd4;
+      display: block;
+      margin: 1rem auto;
+    }
+    footer {
+      text-align: center;
+      background-color: #0047ab;
+      color: #fff;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    a {
+      color: #0077b6;
+    }
+    .resume-btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #0077b6;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .resume-btn:hover {
+      background-color: #005f87;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      padding: 10px 20px;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #005f87;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Willis Otieno</h1>
+    <p>A Web Developer / Video Editor / Designer / Programmer / IT Technician</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="C:\Users\IT ADMIN\Desktop\TRIAL\aquatrace\img\profile pic.jpg" alt="My profile Photo" class="profile-pic">
+    <p>I'm a passionate developer with a knack for clean, user-friendly web experiences. I enjoy working with HTML, CSS, and JavaScript to build responsive, accessible interfaces. I'm also skilled in Python, Flutter, and C++ for back-end and mobile development.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Portfolio Website:</strong> Responsive personal website built with HTML5, CSS3, and a touch of JavaScript.</li>
+      <li><strong>Task Manager App:</strong> A simple To-Do app with local storage and CRUD functionality.</li>
+      <li><strong>AquaTrace:</strong> A digital solution for the fishing industry (Lake Victoria FishNet project).</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Frontend: HTML5, CSS3, JavaScript, React</li>
+      <li>Backend: Python, PHP, C, C++, Visual Basic</li>
+      <li>Mobile: Flutter (Dart)</li>
+      <li>Tools: Git, GitHub, VS Code, Canva, Adobe Premiere</li>
+      <li>Other: UI/UX Design, Graphic Design, Video Editing</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:willisotieno825@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>📞 Phone: 0745023232 / 0768183118</p>
+    <p>✉️ Email: <a href="mailto:willisotieno825@gmail.com">willisotieno825@gmail.com</a></p>
+    <p>📄 <a href="resume.pdf" download class="resume-btn">Download My Resume</a></p>
+    <p>🌐 LinkedIn: <a href="https://www.linkedin.com/in/willisotieno" target="_blank">linkedin.com/in/willisotieno</a></p>
+    <p>💻 GitHub: <a href="https://github.com/Wokullo" target="_blank">github.com/Wokullo</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Willis Otieno.  Still learning. Still growing. Always coding.</p>
+  </footer>
+
+</body>
+</html>
