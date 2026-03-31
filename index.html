@@ -31,17 +31,67 @@
       background-color: #0077b6;
       margin: 0;
       padding: 0.8rem 0;
+      position: relative;
     }
     nav ul li {
       margin: 0 1.5rem;
+      position: relative;
     }
     nav ul li a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
     }
+    .menu-trigger {
+      color: #fff;
+      background: none;
+      border: 0;
+      font: inherit;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 0;
+    }
     nav ul li a:hover {
       text-decoration: underline;
+    }
+    .menu-trigger:hover,
+    .menu-trigger:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 180px;
+      background-color: #005f87;
+      border-radius: 6px;
+      padding: 0.5rem 0;
+      z-index: 10;
+    }
+    .submenu li {
+      margin: 0;
+      padding: 0.3rem 1rem;
+      text-align: left;
+    }
+    .submenu li a {
+      display: block;
+    }
+    .has-submenu:hover .submenu,
+    .has-submenu:focus-within .submenu,
+    .has-submenu.open .submenu {
+      display: block;
+    }
+    @media (max-width: 600px) {
+      nav ul li {
+        margin: 0 0.8rem;
+      }
+      .submenu {
+        left: 0;
+        transform: none;
+      }
     }
     section {
       padding: 2rem;
@@ -125,16 +175,21 @@
 
   <nav>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li class="has-submenu">
+        <button type="button" class="menu-trigger" aria-expanded="false">About</button>
+        <ul class="submenu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <img src="C:\Users\IT ADMIN\Desktop\TRIAL\aquatrace\img\profile pic.jpg" alt="My profile Photo" class="profile-pic">
+    <img src="profile_pic.jpg" alt="My profile Photo" class="profile-pic">
     <p>I'm a passionate developer with a knack for clean, user-friendly web experiences. I enjoy working with HTML, CSS, and JavaScript to build responsive, accessible interfaces. I'm also skilled in Python, Flutter, and C++ for back-end and mobile development.</p>
   </section>
 
@@ -142,7 +197,7 @@
     <h2>Projects</h2>
     <ul>
       <li><strong>Portfolio Website:</strong> Responsive personal website built with HTML5, CSS3, and a touch of JavaScript.</li>
-      <li><strong>Task Manager App:</strong> A simple To-Do app with local storage and CRUD functionality.</li>
+      <li><strong>Task Manager App:</strong> A reliable To-Do app with local storage, CRUD features, filters, and edit support. <a href="task-manager.html">Open Task Manager</a></li>
       <li><strong>AquaTrace:</strong> A digital solution for the fishing industry (Lake Victoria FishNet project).</li>
     </ul>
   </section>
@@ -166,16 +221,34 @@
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p>📞 Phone: 0745023232 / 0768183118</p>
-    <p>✉️ Email: <a href="mailto:willisotieno825@gmail.com">willisotieno825@gmail.com</a></p>
-    <p>📄 <a href="Willis_Okullo_Modern_IT_CV.pdf" download class="resume-btn">Download My Resume</a></p>
-    <p>🌐 LinkedIn: <a href="https://www.linkedin.com/in/willisotieno" target="_blank">linkedin.com/in/willisotieno</a></p>
-    <p>💻 GitHub: <a href="https://github.com/Wokullo" target="_blank">github.com/Wokullo</a></p>
+    <p>Phone: 0745023232 / 0768183118</p>
+    <p>Email: <a href="mailto:willisotieno825@gmail.com">willisotieno825@gmail.com</a></p>
+    <p><a href="Willis_Okullo_Modern_IT_CV.pdf" download class="resume-btn">Download My Resume</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/willisotieno" target="_blank" rel="noopener noreferrer">linkedin.com/in/willisotieno</a></p>
+    <p>GitHub: <a href="https://github.com/Wokullo" target="_blank" rel="noopener noreferrer">github.com/Wokullo</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Willis Otieno.  Still learning. Still growing. Always coding.</p>
+    <p>&copy; 2025 Willis Otieno.  Being one percent better each day.</p>
   </footer>
+
+  <script>
+    const menuItem = document.querySelector('.has-submenu');
+    const menuTrigger = document.querySelector('.menu-trigger');
+
+    menuTrigger.addEventListener('click', () => {
+      const isOpen = menuItem.classList.toggle('open');
+      menuTrigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!menuItem.contains(event.target)) {
+        menuItem.classList.remove('open');
+        menuTrigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
 
 </body>
 </html>
+

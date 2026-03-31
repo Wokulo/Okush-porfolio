@@ -1,0 +1,324 @@
+:root {
+  --bg: #f4fbf8;
+  --panel: #ffffff;
+  --text: #1a2d2c;
+  --muted: #5e7270;
+  --primary: #0e8f6f;
+  --primary-dark: #0a6f55;
+  --danger: #b72e3e;
+  --border: #d9ebe6;
+  --shadow: 0 14px 36px rgba(19, 42, 39, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 90% 10%, #d8f7ef 0, transparent 30%),
+    radial-gradient(circle at 12% 80%, #d8ebff 0, transparent 28%),
+    var(--bg);
+}
+
+.app-shell {
+  max-width: 980px;
+  margin: 1.2rem auto 2rem;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.app-header {
+  padding: 1rem 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.72rem;
+}
+
+h1 {
+  margin: 0.25rem 0;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+.back-link {
+  text-decoration: none;
+  color: var(--primary-dark);
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+}
+
+.back-link:hover,
+.back-link:focus {
+  border-color: var(--primary-dark);
+  outline: none;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.form-panel h2,
+.controls-panel h2,
+.list-panel h2 {
+  margin-top: 0;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.94rem;
+  color: #2d4140;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.62rem 0.7rem;
+  background: #ffffff;
+  color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible {
+  outline: 2px solid #84d6c2;
+  outline-offset: 1px;
+}
+
+.grid-two {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-small,
+.chip {
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0e8f6f, #07ab83);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.68rem 1rem;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.btn-secondary {
+  background: #eaf6f2;
+  color: #234441;
+  padding: 0.62rem 1rem;
+}
+
+.btn-secondary:hover {
+  background: #d9efea;
+}
+
+.filters {
+  display: flex;
+  gap: 0.55rem;
+  margin-bottom: 0.9rem;
+}
+
+.chip {
+  background: #ebf5f1;
+  color: #24403b;
+  padding: 0.45rem 0.85rem;
+  font-weight: 600;
+}
+
+.chip.active {
+  background: #1b725f;
+  color: #fff;
+}
+
+.action-row {
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.task-stats {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.68rem;
+}
+
+.task-item {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  background: #fcfffe;
+}
+
+.task-main {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.task-toggle {
+  margin-top: 0.15rem;
+  width: 18px;
+  height: 18px;
+}
+
+.task-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.task-meta,
+.task-notes {
+  margin: 0.12rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.task-notes:empty {
+  display: none;
+}
+
+.task-item.is-completed .task-title {
+  text-decoration: line-through;
+  color: #5f7471;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.btn-small {
+  padding: 0.43rem 0.7rem;
+  font-size: 0.84rem;
+}
+
+.btn-edit {
+  background: #e8f2ff;
+  color: #184d8a;
+}
+
+.btn-delete {
+  background: #fdecef;
+  color: var(--danger);
+}
+
+.empty-state,
+.status-message,
+.inline-error {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
+
+.inline-error {
+  color: var(--danger);
+  min-height: 1.2em;
+}
+
+.status-message {
+  min-height: 1.2em;
+}
+
+dialog {
+  border: 0;
+  border-radius: 14px;
+  width: min(560px, 94vw);
+  padding: 0;
+}
+
+dialog::backdrop {
+  background: rgba(14, 31, 31, 0.38);
+}
+
+.edit-form {
+  padding: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.edit-form h2 {
+  margin: 0;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+@media (max-width: 700px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .task-actions {
+    justify-content: flex-end;
+  }
+}
