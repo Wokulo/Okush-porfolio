@@ -1,254 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Okush Portfolio</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #e0f2f1;
-      color: #333;
-      scroll-behavior: smooth;
-    }
-    header {
-      background-color: #0047ab;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      background-color: #0077b6;
-      margin: 0;
-      padding: 0.8rem 0;
-      position: relative;
-    }
-    nav ul li {
-      margin: 0 1.5rem;
-      position: relative;
-    }
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .menu-trigger {
-      color: #fff;
-      background: none;
-      border: 0;
-      font: inherit;
-      font-weight: bold;
-      cursor: pointer;
-      padding: 0;
-    }
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-    .menu-trigger:hover,
-    .menu-trigger:focus {
-      text-decoration: underline;
-      outline: none;
-    }
-    .submenu {
-      display: none;
-      position: absolute;
-      top: 120%;
-      left: 50%;
-      transform: translateX(-50%);
-      min-width: 180px;
-      background-color: #005f87;
-      border-radius: 6px;
-      padding: 0.5rem 0;
-      z-index: 10;
-    }
-    .submenu li {
-      margin: 0;
-      padding: 0.3rem 1rem;
-      text-align: left;
-    }
-    .submenu li a {
-      display: block;
-    }
-    .has-submenu:hover .submenu,
-    .has-submenu:focus-within .submenu,
-    .has-submenu.open .submenu {
-      display: block;
-    }
-    @media (max-width: 600px) {
-      nav ul li {
-        margin: 0 0.8rem;
-      }
-      .submenu {
-        left: 0;
-        transform: none;
-      }
-    }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      background-color: #ffffff;
-      border-radius: 8px;
-      margin-top: 1rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      animation: fadeInUp 0.7s ease;
-    }
-    h2 {
-      color: #0047ab;
-      margin-bottom: 1rem;
-    }
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #00bcd4;
-      display: block;
-      margin: 1rem auto;
-    }
-    footer {
-      text-align: center;
-      background-color: #0047ab;
-      color: #fff;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    a {
-      color: #0077b6;
-    }
-    .resume-btn {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: #0077b6;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .resume-btn:hover {
-      background-color: #005f87;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 0.5rem 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    form button {
-      padding: 10px 20px;
-      background-color: #0077b6;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background-color: #005f87;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeInUp {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Willis Otieno, web developer, designer, programmer and IT technician.">
+  <title>Willis Otieno | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="ambient-shape ambient-shape-one"></div>
+  <div class="ambient-shape ambient-shape-two"></div>
+  <div class="ambient-shape ambient-shape-three"></div>
 
-  <header>
-    <h1>Willis Otieno</h1>
-    <p>A Web Developer / Video Editor / Designer / Programmer / IT Technician</p>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">Willis Otieno</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <ul>
-      <li class="has-submenu">
-        <button type="button" class="menu-trigger" aria-expanded="false">About</button>
-        <ul class="submenu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+  <main id="top">
+    <section class="hero container reveal">
+      <div>
+        <p class="eyebrow">Web Developer | Designer | IT Technician</p>
+        <h1>Building reliable digital experiences with clean design and practical engineering.</h1>
+        <p class="lead">I develop responsive websites, automate workflows, and build user-focused tools across web, mobile, and software platforms.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="Willis_Okullo_Modern_IT_CV.pdf" class="btn btn-secondary" download>Download Resume</a>
+        </div>
+      </div>
+      <div class="profile-card">
+        <img src="profile_pic.jpg" alt="Portrait of Willis Otieno">
+        <h2>Willis Otieno</h2>
+        <p>Kenya</p>
+        <div class="meta-row">
+          <span>Open to Work</span>
+          <span>Freelance</span>
+        </div>
+      </div>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="profile_pic.jpg" alt="My profile Photo" class="profile-pic">
-    <p>I'm a passionate developer with a knack for clean, user-friendly web experiences. I enjoy working with HTML, CSS, and JavaScript to build responsive, accessible interfaces. I'm also skilled in Python, Flutter, and C++ for back-end and mobile development.</p>
-  </section>
+    <section id="about" class="container reveal">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2>Professional Summary</h2>
+      </div>
+      <div class="about-grid">
+        <p>I am a multidisciplinary technologist focused on practical, user-friendly solutions. My core strengths include front-end development, technical support, and cross-functional creative work in design and video production.</p>
+        <p>I enjoy translating ideas into production-ready interfaces using HTML, CSS, JavaScript, Python, Flutter, and C++. My approach is detail-driven, collaborative, and focused on measurable outcomes.</p>
+      </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Portfolio Website:</strong> Responsive personal website built with HTML5, CSS3, and a touch of JavaScript.</li>
-      <li><strong>Task Manager App:</strong> A reliable To-Do app with local storage, CRUD features, filters, and edit support. <a href="task-manager.html">Open Task Manager</a></li>
-      <li><strong>AquaTrace:</strong> A digital solution for the fishing industry (Lake Victoria FishNet project).</li>
-    </ul>
-  </section>
+    <section id="projects" class="container reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected Work</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>Professional personal portfolio with responsive design, smooth navigation, and optimized content structure.</p>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+        </article>
+        <article class="project-card">
+          <h3>Task Manager App</h3>
+          <p>To-do application with local storage, CRUD operations, filtering, and editing flow for everyday productivity.</p>
+          <div class="project-links">
+            <a href="task-manager.html">Open Project</a>
+          </div>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Local Storage</span>
+        </article>
+        <article class="project-card">
+          <h3>AquaTrace</h3>
+          <p>Digital platform concept for fisheries operations and traceability in the Lake Victoria ecosystem.</p>
+          <span class="tag">Product Design</span>
+          <span class="tag">Research</span>
+        </article>
+      </div>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Frontend: HTML5, CSS3, JavaScript, React</li>
-      <li>Backend: Python, PHP, C, C++, Visual Basic</li>
-      <li>Mobile: Flutter (Dart)</li>
-      <li>Tools: Git, GitHub, VS Code, Canva, Adobe Premiere</li>
-      <li>Other: UI/UX Design, Graphic Design, Video Editing</li>
-    </ul>
-  </section>
+    <section id="skills" class="container reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Skills</p>
+        <h2>Capabilities</h2>
+      </div>
+      <div class="skills-wrap">
+        <span class="chip">HTML5</span>
+        <span class="chip">CSS3</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">React</span>
+        <span class="chip">Python</span>
+        <span class="chip">PHP</span>
+        <span class="chip">C</span>
+        <span class="chip">C++</span>
+        <span class="chip">Visual Basic</span>
+        <span class="chip">Flutter</span>
+        <span class="chip">Git & GitHub</span>
+        <span class="chip">UI/UX Design</span>
+        <span class="chip">Video Editing</span>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="mailto:willisotieno825@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p>Phone: 0745023232 / 0768183118</p>
-    <p>Email: <a href="mailto:willisotieno825@gmail.com">willisotieno825@gmail.com</a></p>
-    <p><a href="Willis_Okullo_Modern_IT_CV.pdf" download class="resume-btn">Download My Resume</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/willisotieno" target="_blank" rel="noopener noreferrer">linkedin.com/in/willisotieno</a></p>
-    <p>GitHub: <a href="https://github.com/Wokullo" target="_blank" rel="noopener noreferrer">github.com/Wokullo</a></p>
-  </section>
+    <section id="contact" class="container reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's Work Together</h2>
+      </div>
+      <div class="contact-grid">
+        <form action="mailto:willisotieno825@gmail.com" method="post" enctype="text/plain" class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <div class="contact-meta">
+          <p><strong>Phone:</strong> 0745023232 / 0768183118</p>
+          <p><strong>Email:</strong> <a href="mailto:willisotieno825@gmail.com">willisotieno825@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/willisotieno" target="_blank" rel="noopener noreferrer">linkedin.com/in/willisotieno</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/Wokullo" target="_blank" rel="noopener noreferrer">github.com/Wokullo</a></p>
+          <a href="Willis_Okullo_Modern_IT_CV.pdf" class="btn btn-secondary" download>Download Full Resume</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 Willis Otieno.  Being one percent better each day.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Willis Otieno. Being one percent better each day.</p>
+    </div>
   </footer>
 
-  <script>
-    const menuItem = document.querySelector('.has-submenu');
-    const menuTrigger = document.querySelector('.menu-trigger');
-
-    menuTrigger.addEventListener('click', () => {
-      const isOpen = menuItem.classList.toggle('open');
-      menuTrigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-
-    document.addEventListener('click', (event) => {
-      if (!menuItem.contains(event.target)) {
-        menuItem.classList.remove('open');
-        menuTrigger.setAttribute('aria-expanded', 'false');
-      }
-    });
-  </script>
-
+  <script src="main.js"></script>
 </body>
 </html>
 
