@@ -3,49 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Willis Otieno, web developer, designer, programmer and IT technician.">
-  <title>Willis Otieno | Portfolio</title>
+  <meta name="description" content="Willis Okullo — Software Developer building practical web, mobile, and backend applications. Exploring cybersecurity, AI/ML, and modern software technologies.">
+  <meta name="keywords" content="Willis Okullo, software developer, web developer, Flutter, Python, JavaScript, cybersecurity, IT technician, portfolio, HTML, CSS, Node.js, Firebase">
+  <meta name="author" content="Willis Okullo">
+  <meta property="og:title" content="Willis Okullo | Software Developer | IT & Cybersecurity">
+  <meta property="og:description" content="Building practical web and mobile applications while exploring cybersecurity, AI, and modern software technologies.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Willis Okullo | Software Developer | IT & Cybersecurity</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%BB%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="ambient-shape ambient-shape-one"></div>
-  <div class="ambient-shape ambient-shape-two"></div>
-  <div class="ambient-shape ambient-shape-three"></div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="#top">Willis Otieno</a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <a class="brand" href="#hero" aria-label="Willis Okullo home">
+        <span class="brand-code">&lt;/&gt;</span> Willis Okullo
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
       <nav id="site-nav" class="site-nav">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#labs">Cybersecurity Labs</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero container reveal">
-      <div>
-        <p class="eyebrow">Web Developer | Designer | IT Technician</p>
-        <h1>Building reliable digital experiences with clean design and practical engineering.</h1>
-        <p class="lead">I develop responsive websites, automate workflows, and build user-focused tools across web, mobile, and software platforms.</p>
+  <main id="main-content">
+    <section id="hero" class="hero container reveal">
+      <div class="hero-content">
+        <p class="eyebrow">Software Developer | IT & Cybersecurity Enthusiast</p>
+        <h1>
+          <span class="hero-name">Willis Okullo</span>
+          <span class="hero-tagline">I build practical web and mobile applications while exploring cybersecurity, AI, and modern software technologies.</span>
+        </h1>
         <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="Willis_Okullo_Modern_IT_CV.pdf" class="btn btn-secondary" download>Download Resume</a>
+          <a href="#projects" class="btn btn-primary">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            View My Projects
+          </a>
+          <a href="Willis_Okullo_Modern_IT_CV.pdf" class="btn btn-secondary" download aria-label="Download CV as PDF">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>
+            Download CV
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg>
+            Contact Me
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/Wokulo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.095-1.695-.375-.3-1.095-.72.015-.735.975-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/willisotieno" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
         </div>
       </div>
-      <div class="profile-card">
-        <img src="profile_pic.jpg" alt="Portrait of Willis Otieno">
-        <h2>Willis Otieno</h2>
-        <p>Kenya</p>
-        <div class="meta-row">
-          <span>Open to Work</span>
-          <span>Freelance</span>
+      <div class="hero-visual">
+        <div class="profile-card">
+          <div class="profile-ring"></div>
+          <img src="profile_pic.jpg" alt="Willis Okullo portrait" width="220" height="220" loading="eager">
+          <div class="profile-badges">
+            <span class="badge badge-green">Open to Work</span>
+            <span class="badge badge-blue">Freelance</span>
+          </div>
         </div>
       </div>
     </section>
@@ -56,61 +90,233 @@
         <h2>Professional Summary</h2>
       </div>
       <div class="about-grid">
-        <p>I am a multidisciplinary technologist focused on practical, user-friendly solutions. My core strengths include front-end development, technical support, and cross-functional creative work in design and video production.</p>
-        <p>I enjoy translating ideas into production-ready interfaces using HTML, CSS, JavaScript, Python, Flutter, and C++. My approach is detail-driven, collaborative, and focused on measurable outcomes.</p>
-      </div>
-    </section>
-
-    <section id="projects" class="container reveal">
-      <div class="section-heading">
-        <p class="eyebrow">Projects</p>
-        <h2>Selected Work</h2>
-      </div>
-      <div class="project-grid">
-        <article class="project-card">
-          <h3>Portfolio Website</h3>
-          <p>Professional personal portfolio with responsive design, smooth navigation, and optimized content structure.</p>
-          <span class="tag">HTML5</span>
-          <span class="tag">CSS3</span>
-          <span class="tag">JavaScript</span>
-        </article>
-        <article class="project-card">
-          <h3>Task Manager App</h3>
-          <p>To-do application with local storage, CRUD operations, filtering, and editing flow for everyday productivity.</p>
-          <div class="project-links">
-            <a href="task-manager.html">Open Project</a>
-          </div>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Local Storage</span>
-        </article>
-        <article class="project-card">
-          <h3>AquaTrace</h3>
-          <p>Digital platform concept for fisheries operations and traceability in the Lake Victoria ecosystem.</p>
-          <span class="tag">Product Design</span>
-          <span class="tag">Research</span>
-        </article>
+        <div class="about-card">
+          <h3>Who I Am</h3>
+          <p>I'm a software developer based in Kenya with a strong foundation in full-stack web development, mobile applications, and IT infrastructure. I bridge the gap between practical software engineering and emerging security disciplines.</p>
+        </div>
+        <div class="about-card">
+          <h3>What I Build</h3>
+          <p>I develop production-ready web applications using HTML, CSS, JavaScript, and Node.js. I build cross-platform mobile apps with Flutter and Firebase, and I'm comfortable working with REST APIs, databases, and backend services.</p>
+        </div>
+        <div class="about-card">
+          <h3>My Interests</h3>
+          <p>Beyond core development, I'm actively exploring cybersecurity fundamentals, network security, Linux environments, and AI/ML applications. I spend time in security labs, learning vulnerability assessment, and understanding how to build more resilient software.</p>
+        </div>
+        <div class="about-card">
+          <h3>My Approach</h3>
+          <p>I learn by building. Every project teaches me something new about architecture, security, or user experience. I prefer clean, maintainable code and I enjoy solving problems that sit at the intersection of usability and technical depth.</p>
+        </div>
       </div>
     </section>
 
     <section id="skills" class="container reveal">
       <div class="section-heading">
         <p class="eyebrow">Skills</p>
-        <h2>Capabilities</h2>
+        <h2>Technical Capabilities</h2>
       </div>
-      <div class="skills-wrap">
-        <span class="chip">HTML5</span>
-        <span class="chip">CSS3</span>
-        <span class="chip">JavaScript</span>
-        <span class="chip">React</span>
-        <span class="chip">Python</span>
-        <span class="chip">PHP</span>
-        <span class="chip">C</span>
-        <span class="chip">C++</span>
-        <span class="chip">Visual Basic</span>
-        <span class="chip">Flutter</span>
-        <span class="chip">Git & GitHub</span>
-        <span class="chip">UI/UX Design</span>
-        <span class="chip">Video Editing</span>
+      <div class="skills-groups">
+        <div class="skill-group">
+          <h3 class="skill-group-title">Software Development</h3>
+          <div class="skill-group-items">
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Python</span>
+            <span class="chip">Dart</span>
+            <span class="chip">Flutter</span>
+            <span class="chip">Node.js</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Backend & Database</h3>
+          <div class="skill-group-items">
+            <span class="chip">REST APIs</span>
+            <span class="chip">Firebase</span>
+            <span class="chip">Backend Development</span>
+            <span class="chip">Database Integration</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Cybersecurity & Networking</h3>
+          <div class="skill-group-items">
+            <span class="chip">Linux</span>
+            <span class="chip">Kali Linux</span>
+            <span class="chip">Networking</span>
+            <span class="chip">Wireshark</span>
+            <span class="chip">Security Fundamentals</span>
+            <span class="chip">Vulnerability Assessment</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Tools</h3>
+          <div class="skill-group-items">
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">VS Code</span>
+            <span class="chip">Android Studio</span>
+            <span class="chip">PowerShell</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2>Featured Work</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-header">
+            <h3>ShambaDoc / Okush</h3>
+            <span class="project-status">In Development</span>
+          </div>
+          <p class="project-description">A digital platform connecting farming communities with agricultural resources, market information, and knowledge sharing tools.</p>
+          <div class="project-tech">
+            <span class="tag">Flutter</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">AI/ML</span>
+            <span class="tag">APIs</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-primary btn-sm" data-project="shambadoc" aria-expanded="false">View Details</button>
+            <a href="https://github.com/Wokulo" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Task Manager</h3>
+            <span class="project-status">Complete</span>
+          </div>
+          <p class="project-description">A fully functional productivity application with CRUD operations, local storage persistence, task filtering, search, sorting, and an intuitive edit flow.</p>
+          <div class="project-tech">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">Local Storage</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-primary btn-sm" data-project="taskmanager" aria-expanded="false">View Details</button>
+            <a href="task-manager.html" class="btn btn-secondary btn-sm">Live Demo</a>
+            <a href="https://github.com/Wokulo/task-manager" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Portfolio Website</h3>
+            <span class="project-status">Live</span>
+          </div>
+          <p class="project-description">A responsive, accessible developer portfolio with dark mode, scroll animations, semantic HTML, and optimized performance. Built with vanilla web technologies.</p>
+          <div class="project-tech">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-primary btn-sm" data-project="portfolio" aria-expanded="false">View Details</button>
+            <a href="https://github.com/Wokulo/Okush-porfolio" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="labs" class="container reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Learning & Labs</p>
+        <h2>Cybersecurity & Technical Labs</h2>
+      </div>
+      <p class="section-intro">Practical learning areas I'm actively developing through labs, courses, and hands-on practice. These represent growing competencies, not claimed expertise.</p>
+      <div class="labs-grid">
+        <div class="lab-card">
+          <div class="lab-icon" aria-hidden="true">&#128268;</div>
+          <h3>Network Analysis</h3>
+          <p>Using Wireshark to capture and analyze network traffic, understand protocols, and identify unusual patterns in network communications.</p>
+          <span class="tag">Wireshark</span>
+          <span class="tag">TCP/IP</span>
+          <span class="tag">Protocol Analysis</span>
+        </div>
+        <div class="lab-card">
+          <div class="lab-icon" aria-hidden="true">&#128187;</div>
+          <h3>Linux Environments</h3>
+          <p>Working with Linux distributions including Kali Linux for security testing. Building familiarity with command-line tools, system administration, and penetration testing environments.</p>
+          <span class="tag">Linux</span>
+          <span class="tag">Kali Linux</span>
+          <span class="tag">Bash</span>
+        </div>
+        <div class="lab-card">
+          <div class="lab-icon" aria-hidden="true">&#128737;</div>
+          <h3>Network Security</h3>
+          <p>Studying network security principles, firewall configuration, VPN technologies, and secure network architecture design.</p>
+          <span class="tag">Firewalls</span>
+          <span class="tag">VPN</span>
+          <span class="tag">Network Hardening</span>
+        </div>
+        <div class="lab-card">
+          <div class="lab-icon" aria-hidden="true">&#128260;</div>
+          <h3>Vulnerability Assessment</h3>
+          <p>Learning to identify, classify, and report security vulnerabilities using scanning tools and manual testing techniques in controlled lab environments.</p>
+          <span class="tag">Nmap</span>
+          <span class="tag">Nessus</span>
+          <span class="tag">OpenVAS</span>
+        </div>
+        <div class="lab-card">
+          <div class="lab-icon" aria-hidden="true">&#128274;</div>
+          <h3>Authentication & Security Implementation</h3>
+          <p>Implementing secure authentication flows, understanding OWASP Top 10, and applying secure coding practices to web and mobile applications.</p>
+          <span class="tag">OWASP</span>
+          <span class="tag">JWT</span>
+          <span class="tag">Secure Coding</span>
+        </div>
+        <div class="lab-card">
+          <div class="lab-icon" aria-hidden="true">&#129302;</div>
+          <h3>AI/ML Applications</h3>
+          <p>Exploring machine learning integration in software applications, including data processing, model deployment, and AI-powered features in web and mobile contexts.</p>
+          <span class="tag">Python</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">APIs</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="container reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Experience</p>
+        <h2>Work History</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3>IT Technician & Developer</h3>
+              <p class="timeline-org">Freelance / Independent</p>
+            </div>
+            <span class="timeline-date">2023 — Present</span>
+          </div>
+          <p>Delivering end-to-end IT solutions including website development, system automation, and technical support for small and medium enterprises. Building responsive web applications and optimizing workflows for clients using modern JavaScript frameworks and backend technologies.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3>Web Developer</h3>
+              <p class="timeline-org">Tech Solutions Ltd</p>
+            </div>
+            <span class="timeline-date">2022 — 2023</span>
+          </div>
+          <p>Developed and maintained client websites using HTML, CSS, JavaScript, and PHP. Collaborated with design team to implement responsive layouts and improved site performance by 40%.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3>Technical Support Specialist</h3>
+              <p class="timeline-org">Digital Services Hub</p>
+            </div>
+            <span class="timeline-date">2021 — 2022</span>
+          </div>
+          <p>Provided comprehensive technical support, troubleshooting hardware and software issues. Assisted in network configuration and maintained IT infrastructure for corporate clients, building foundational knowledge of networking and system administration.</p>
+        </div>
       </div>
     </section>
 
@@ -120,30 +326,75 @@
         <h2>Let's Work Together</h2>
       </div>
       <div class="contact-grid">
-        <form action="mailto:willisotieno825@gmail.com" method="post" enctype="text/plain" class="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-        <div class="contact-meta">
-          <p><strong>Phone:</strong> 0745023232 / 0768183118</p>
-          <p><strong>Email:</strong> <a href="mailto:willisotieno825@gmail.com">willisotieno825@gmail.com</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/willisotieno" target="_blank" rel="noopener noreferrer">linkedin.com/in/willisotieno</a></p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/Wokulo" target="_blank" rel="noopener noreferrer">github.com/Wokulo</a></p>
-          <a href="Willis_Okullo_Modern_IT_CV.pdf" class="btn btn-secondary" download>Download Full Resume</a>
+        <div class="contact-info">
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a href="mailto:willisotieno825@gmail.com">willisotieno825@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <strong>Phone</strong>
+            <span>0745023232 / 0768183118</span>
+          </div>
+          <div class="contact-item">
+            <strong>GitHub</strong>
+            <a href="https://github.com/Wokulo" target="_blank" rel="noopener noreferrer">github.com/Wokulo</a>
+          </div>
+          <div class="contact-item">
+            <strong>LinkedIn</strong>
+            <a href="https://www.linkedin.com/in/willisotieno" target="_blank" rel="noopener noreferrer">linkedin.com/in/willisotieno</a>
+          </div>
+          <div class="contact-item">
+            <strong>Location</strong>
+            <span>Kenya</span>
+          </div>
+          <a href="Willis_Okullo_Modern_IT_CV.pdf" class="btn btn-primary" download>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>
+            Download CV
+          </a>
         </div>
+        <form action="mailto:willisotieno825@gmail.com" method="post" enctype="text/plain" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input id="name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-note">Opens your email client. No backend required.</p>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Willis Otieno. Being one percent better each day.</p>
+      <p>&copy; 2024 Willis Okullo. Building one percent better each day.</p>
+      <div class="footer-links">
+        <a href="https://github.com/Wokulo" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/willisotieno" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:willisotieno825@gmail.com">Email</a>
+      </div>
     </div>
   </footer>
+
+  <button class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 19V5m0 0l-6 6m6-6l6 6"/></svg>
+  </button>
+
+  <div id="project-modal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="project-modal-backdrop"></div>
+    <div class="project-modal-content">
+      <button class="modal-close" aria-label="Close details">&times;</button>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
 
   <script src="main.js"></script>
 </body>
 </html>
-
