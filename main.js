@@ -260,7 +260,7 @@ document.addEventListener("keydown", (e) => {
 
 const contactForm = document.querySelector(".contact-form");
 if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
+  contactForm.addEventListener("submit", async (e) => {
     const name = contactForm.querySelector("input[name='name']");
     const email = contactForm.querySelector("input[name='email']");
     const message = contactForm.querySelector("textarea[name='message']");
@@ -290,6 +290,12 @@ if (contactForm) {
 
     if (!valid) {
       e.preventDefault();
+      return;
     }
+
+    const submitBtn = contactForm.querySelector("button[type='submit']");
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
   });
 }
