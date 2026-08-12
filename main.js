@@ -261,6 +261,8 @@ document.addEventListener("keydown", (e) => {
 const contactForm = document.querySelector(".contact-form");
 if (contactForm) {
   contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
     const name = contactForm.querySelector("input[name='name']");
     const email = contactForm.querySelector("input[name='email']");
     const message = contactForm.querySelector("textarea[name='message']");
@@ -290,7 +292,6 @@ if (contactForm) {
     }
 
     if (!valid) {
-      e.preventDefault();
       if (statusEl) { statusEl.textContent = "Please fix the errors above."; statusEl.style.color = "#ef4444"; }
       return;
     }
@@ -310,8 +311,11 @@ if (contactForm) {
       });
 
       if (response.ok) {
-        if (statusEl) { statusEl.textContent = "Message sent! I'll get back to you soon."; statusEl.style.color = "#065f46"; }
+        if (statusEl) { statusEl.textContent = "Message sent successfully! I'll get back to you soon."; statusEl.style.color = "#065f46"; }
         contactForm.reset();
+        setTimeout(() => {
+          contactForm.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 100);
       } else {
         const data = await response.json().catch(() => ({}));
         const errorMsg = data.errors ? data.errors.map((err) => err.message).join(", ") : "Something went wrong. Please try again.";
