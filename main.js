@@ -264,6 +264,7 @@ if (contactForm) {
     const name = contactForm.querySelector("input[name='name']");
     const email = contactForm.querySelector("input[name='email']");
     const message = contactForm.querySelector("textarea[name='message']");
+    const statusEl = document.getElementById("form-status");
     let valid = true;
 
     if (!name || !name.value.trim()) {
@@ -290,6 +291,7 @@ if (contactForm) {
 
     if (!valid) {
       e.preventDefault();
+      if (statusEl) { statusEl.textContent = "Please fix the errors above."; statusEl.style.color = "#ef4444"; }
       return;
     }
 
@@ -297,5 +299,29 @@ if (contactForm) {
     const originalText = submitBtn.textContent;
     submitBtn.textContent = "Sending...";
     submitBtn.disabled = true;
+    if (statusEl) { statusEl.textContent = ""; statusEl.style.color = ""; }
+
+    const formData = new FormData(contactForm);
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
+      });
+
+      if (response.ok) {
+        if (statusEl) { statusEl.textContent = "Message sent! I'll get back to you soon."; statusEl.style.color = "#065f46"; }
+        contactForm.reset();
+      } else {
+        const data = await response.json().catch(() => ({}));
+        const errorMsg = data.errors ? data.errors.map((err) => err.message).join(", ") : "Something went wrong. Please try again.";
+        if (statusEl) { statusEl.textContent = errorMsg; statusEl.style.color = "#ef4444"; }
+      }
+    } catch (err) {
+      if (statusEl) { statusEl.textContent = "Network error. Please try again later."; statusEl.style.color = "#ef4444"; }
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
   });
 }
